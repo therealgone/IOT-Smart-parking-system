@@ -1,0 +1,68 @@
+:root {
+  --bg: #0b1220;
+  --card: #131c2e;
+  --text: #e8eefb;
+  --ok: #1db954;
+  --bad: #e74c3c;
+  --muted: #9bb0d3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 800px at 20% -10%, #1a2640, #0b1220);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+h1 { margin: 0; font-size: 22px; }
+
+#lastUpdated { color: var(--muted); font-size: 14px; }
+
+main { flex: 1; display: grid; place-items: center; padding: 24px; }
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 16px;
+  width: min(680px, 100%);
+}
+
+.slot {
+  background: linear-gradient(160deg, #121a2c, #0f1726);
+  border: 1px solid #26324b;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 8px 24px rgba(2,12,27,.35), inset 0 0 0 1px rgba(255,255,255,.03);
+}
+
+.slot.available { outline: 2px solid color-mix(in srgb, var(--ok) 55%, transparent); }
+.slot.occupied { outline: 2px solid color-mix(in srgb, var(--bad) 55%, transparent); }
+
+.slot.available { background: linear-gradient(160deg, #10221a, #0f1726); }
+.slot.occupied { background: linear-gradient(160deg, #2a1110, #0f1726); }
+
+.slot:hover { transform: translateY(-2px); }
+
+footer { padding: 16px 24px; color: var(--muted); }
+
+footer a { color: #79b8ff; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+
