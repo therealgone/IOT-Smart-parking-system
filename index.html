@@ -3,21 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Smart Parking Dashboard</title>
+    <title>TP-2 Parking Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Smart Parking Dashboard</h1>
-      <div id="lastUpdated">Last updated: —</div>
+    <header class="page-header">
+      <div class="branding">
+        <div class="lot">TP-2</div>
+        <h1>Parking Dashboard</h1>
+      </div>
+      <div class="meta">
+        <div class="stat">
+          <span class="label">Available</span>
+          <span id="availableCount" class="value">—</span>
+          <span class="of">/ 4</span>
+        </div>
+        <div id="lastUpdated" class="muted">Last updated: —</div>
+      </div>
     </header>
 
     <main>
       <div class="slots">
-        <div id="slot1" class="slot">Loading…</div>
-        <div id="slot2" class="slot">Loading…</div>
-        <div id="slot3" class="slot">Loading…</div>
-        <div id="slot4" class="slot">Loading…</div>
+        <div id="slot1" class="slot"><span class="name">S1</span><span class="state">Loading…</span></div>
+        <div id="slot2" class="slot"><span class="name">S2</span><span class="state">Loading…</span></div>
+        <div id="slot3" class="slot"><span class="name">S3</span><span class="state">Loading…</span></div>
+        <div id="slot4" class="slot"><span class="name">S4</span><span class="state">Loading…</span></div>
       </div>
     </main>
 
